@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Water Quality Analysis using ANN</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">KMIT</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">IOMP - Team Number 4</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">IOMP - Team Number 4</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Water Quality Analysis</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the Potability of Water Sample<br></h5>
+      </div>
+
+      <div class="row">
+        <form action='/predict' method="post" class="col s12">
+          <div class="row">
+
+            <div class="input-field col s4">
+              <label for="first_name"><b>pH</b></label>
+              <br>
+              <input placeholder="Enter pH value (range 0-14)" name="ph" id="ph" type="number" min="0" max="14"
+                step="any" required="required" class="validate">
+            </div>
+
+            <div class="input-field col s4">
+              <label for="last_name"><b>Hardness </b></label>
+              <br>
+              <input id="hardness" name="hardness" placeholder="Enter Hardness value" type="number" required="required"
+                class="validate">
+            </div>
+
+            <div class="input-field col s4">
+              <label for="_name"><b>Solids</b></label>
+              <br>
+              <input id="solids" name="solids" placeholder="Enter Solids value" type="number" required="required"
+                class="validate">
+            </div>
+
+            <div class="input-field col s4">
+              <label for="first_name"><b>Chloramines</b></label>
+              <br>
+              <input placeholder="Enter Chloramines value" name="chloramines" id="chloramines" type="number"
+                required="required" class="validate">
+            </div>
+
+            <div class="input-field col s4">
+              <label for="first_name"><b>Sulfate</b></label>
+              <br>
+              <input placeholder="Enter Sulfate value" name="sulfate" id="sulfate" type="number" required="required"
+                class="validate">
+            </div>
+
+            <div class="input-field col s4">
+              <label for="first_name"><b>Conductivity</b></label>
+              <br>
+              <input placeholder="Enter Conductivity value" name="conductivity" id="conductivity" type="number"
+                required="required" class="validate">
+            </div>
+
+            <div class="input-field col s4">
+              <label for="first_name"><b>Organic Carbon</b></label>
+              <br>
+              <input placeholder="Enter Organic Carbon value" name="organic_carbon" id="organic_carbon" type="number"
+                required="required" class="validate">
+            </div>
+
+            <div class="input-field col s4">
+              <label for="first_name"><b>Trihalomethanes</b></label>
+              <br>
+              <input placeholder="Enter Trihalomethanes value" name="trihalomethanes" id="trihalomethanes" type="number"
+                required="required" class="validate">
+            </div>
+
+            <div class="input-field col s4">
+              <label for="first_name"><b>Turbidity</b></label>
+              <br>
+              <input placeholder="Enter Turbidity value" name="turbidity" id="turbidity" type="number"
+                required="required" class="validate">
+            </div>
+
+
+
+          </div>
+
+          <div class="row center">
+
+            <button type="submit" class="btn-large waves-effect waves-light orange">Predict Potability</button>
+          </div>
+        </form>
+      </div>
+
+      <br>{{pred}}<br>
+
+
+
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Heading 1</h5>
+
+            <p class="light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias laborum molestias
+              distinctio consectetur totam ullam iusto molestiae quo explicabo, nulla enim beatae veritatis quasi quas
+              possimus? Quisquam eaque quibusdam atque?</p>
+          </div>
+
+
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Heading 2</h5>
+
+            <p class="light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate culpa corporis neque
+              aperiam reiciendis consectetur tempore minima dolore laudantium nihil eum assumenda ipsa iste deserunt,
+              voluptas facilis expedita ipsam fugiat.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Heading 3</h5>
+
+            <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rem obcaecati voluptate
+              molestiae quo doloribus similique, cum ipsum consequuntur recusandae impedit hic, totam quia, vero tenetur
+              blanditiis fuga reiciendis amet?</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <br><br>
+  </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l5 s12">
+          <h5 class="white-text">Team Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of 4 students working on this project for <b>Industrial
+              Oriented Mini Project (IOMP)</b> in our <b>4th year CSE</b> at <b>Keshav Memorial Institute of Technology
+              (KMIT)</b></p>
+
+
+        </div>
+        <div class="col l4 s12">
+          <h5 class="white-text">Team Members - LinkedIn</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.linkedin.com/in/dharan-tej-08a168184/"
+                target="_blank">Pusthakala Dharan Tej</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/sanem-sudheendra/" target="_blank">Sanem
+                Sudheendra</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/donti-rohit-44746b1b0" target="_blank">Donti
+                Rohit</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/" target="_blank">Ajay</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">GitHub</h5>
+          <ul>
+            <li><a class="white-text" href="https://github.com/dharantej1" target="_blank">Dharan Tej</a></li>
+            <li><a class="white-text" href="https://github.com/sudheendra17" target="_blank">Sudheendra</a></li>
+            <li><a class="white-text" href="https://github.com/DontiRohit" target="_blank">Rohit</a></li>
+            <li><a class="white-text" href="https://github.com/" target="_blank">Ajay</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-4" href="http://github.com/dharantej1" target="_blank">Pusthakala
+          Dharan Tej</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>
