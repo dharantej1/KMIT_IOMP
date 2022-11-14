@@ -92,8 +92,7 @@ print('Size Training Set: {}'.format(len(X_train)))
 print('Size Testing Set: {}'.format(len(X_test)))
 
 from sklearn.model_selection import train_test_split
-#import tensorflow as tf
-#from tensorflow.python.tools import module_util as _module_util
+import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.callbacks import EarlyStopping
