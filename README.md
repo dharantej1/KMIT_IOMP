@@ -1,2 +1,2 @@
 # KMIT_IOMP
-Water Quality Analysis using Machine Learning ANN
+Water Quality Analysis using ANN
