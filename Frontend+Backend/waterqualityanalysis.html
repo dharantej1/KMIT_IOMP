@@ -29,10 +29,9 @@
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Water Quality Analysis</h1>
+      <h2 class="header center orange-text">Water Quality Analysis</h2>
       <div class="row center">
-        <h5 class="header col s12 light">Predict the Potability of Water Sample<br></h5>
+        <h5 class="header col s12 light">Predict the Potability of Water Sample</h5>
       </div>
 
       <div class="row">
@@ -49,56 +48,56 @@
             <div class="input-field col s4">
               <label for="last_name"><b>Hardness </b></label>
               <br>
-              <input id="hardness" name="hardness" placeholder="Enter Hardness value" type="number" required="required"
+              <input id="hardness" name="hardness" placeholder="Enter Hardness value" type="number" required="required" step="any"
                 class="validate">
             </div>
 
             <div class="input-field col s4">
               <label for="_name"><b>Solids</b></label>
               <br>
-              <input id="solids" name="solids" placeholder="Enter Solids value" type="number" required="required"
+              <input id="solids" name="solids" placeholder="Enter Solids value" type="number" required="required" step="any"
                 class="validate">
             </div>
 
             <div class="input-field col s4">
               <label for="first_name"><b>Chloramines</b></label>
               <br>
-              <input placeholder="Enter Chloramines value" name="chloramines" id="chloramines" type="number"
+              <input placeholder="Enter Chloramines value" name="chloramines" id="chloramines" type="number" step="any"
                 required="required" class="validate">
             </div>
 
             <div class="input-field col s4">
               <label for="first_name"><b>Sulfate</b></label>
               <br>
-              <input placeholder="Enter Sulfate value" name="sulfate" id="sulfate" type="number" required="required"
+              <input placeholder="Enter Sulfate value" name="sulfate" id="sulfate" type="number" required="required" step="any"
                 class="validate">
             </div>
 
             <div class="input-field col s4">
               <label for="first_name"><b>Conductivity</b></label>
               <br>
-              <input placeholder="Enter Conductivity value" name="conductivity" id="conductivity" type="number"
+              <input placeholder="Enter Conductivity value" name="conductivity" id="conductivity" type="number" step="any"
                 required="required" class="validate">
             </div>
 
             <div class="input-field col s4">
               <label for="first_name"><b>Organic Carbon</b></label>
               <br>
-              <input placeholder="Enter Organic Carbon value" name="organic_carbon" id="organic_carbon" type="number"
+              <input placeholder="Enter Organic Carbon value" name="organic_carbon" id="organic_carbon" type="number" step="any"
                 required="required" class="validate">
             </div>
 
             <div class="input-field col s4">
               <label for="first_name"><b>Trihalomethanes</b></label>
               <br>
-              <input placeholder="Enter Trihalomethanes value" name="trihalomethanes" id="trihalomethanes" type="number"
+              <input placeholder="Enter Trihalomethanes value" name="trihalomethanes" id="trihalomethanes" type="number" step="any"
                 required="required" class="validate">
             </div>
 
             <div class="input-field col s4">
               <label for="first_name"><b>Turbidity</b></label>
               <br>
-              <input placeholder="Enter Turbidity value" name="turbidity" id="turbidity" type="number"
+              <input placeholder="Enter Turbidity value" name="turbidity" id="turbidity" type="number" step="any"
                 required="required" class="validate">
             </div>
 
@@ -108,7 +107,7 @@
 
           <div class="row center">
 
-            <button type="submit" class="btn-large waves-effect waves-light orange">Predict Potability</button>
+            <button type="submit" class="btn waves-effect waves-light orange">Predict Potability</button>
             <br>
             <h5 class="header col s12 light">{{pred}}<br></h5><br>
           </div>

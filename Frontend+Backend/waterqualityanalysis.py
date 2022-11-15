@@ -124,52 +124,8 @@ print("test_losses, test accdrng on unseen data:", results)
 
 
 import warnings
-import pickle
+import joblib
 warnings.filterwarnings("ignore")
-#import math
 
 
-pickle.dump(model,open("model.pkl","wb"))
-model=pickle.load(open("model.pkl","rb"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# data_to_be_predicted = [[-0.47658809,  0.55487565, -0.84464553, -0.34708111, -0.41820391,-0.69065654, -0.64326531,  1.07434204, -0.23191052]]
-# final_result = model.predict(data_to_be_predicted)
-# if abs(final_result) < 0.5:
-#   print("Not potable")
-# else:
-#   print("Potable")
-
-# data_to_be_predicted = [[ 1.31924393,-2.33322826, 0.54404732, -0.64929837,0.24431558, -0.57999474,
-#  -1.04020633 ,-0.73539734,  1.17711959]]
-# final_result = model.predict(data_to_be_predicted)
-# if abs(final_result) < 0.5:
-#   print("Not potable")
-# else:
-#   print("Potable")
+joblib.dump(model,"job")
