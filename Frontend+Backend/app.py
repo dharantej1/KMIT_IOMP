@@ -1,6 +1,11 @@
 import joblib
 import numpy as np
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,send_file
+import io
+import base64
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 app = Flask(__name__,template_folder="./")
 
@@ -21,6 +26,10 @@ def predict():
         return render_template("waterqualityanalysis.html",pred="The Sample of Water is Suitable for Drinking")
     else:
         return render_template("waterqualityanalysis.html",pred="The Sample of Water is Not Suitable for Drinking")
+
+
+    # fig,ax=plt.subplots(figsize=(6,6))
+    # ax=sns.set_style(style="darkgrid")
     
 
 if __name__ == '__main__':
