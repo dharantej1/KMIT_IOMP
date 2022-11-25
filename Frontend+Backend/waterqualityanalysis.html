@@ -107,9 +107,22 @@
 
           <div class="row center">
 
-            <button type="submit" class="btn waves-effect waves-light orange">Predict Potability</button>
+            <button type="submit" class="btn-large waves-effect waves-light orange">Predict Potability</button>
             <br>
             <h5 class="header col s12 light">{{pred}}<br></h5><br>
+            <br>
+          </div>
+        </form>
+
+        <form action='/download' method="post" class="col s12">
+          <div class="row">
+            <div class="row center">
+              
+                <!-- <button type="submit" class="btn-small waves-effect waves-light orange"> -->
+                  <a class="btn btn-success" href="{{url_for('download')}}">Download Report (PDF)</a>
+                <!-- </button> -->
+              
+            </div>
           </div>
         </form>
 
