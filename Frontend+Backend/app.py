@@ -51,7 +51,7 @@ introduction3="can classify whether a specific water sample is safe or unfit for
 class PDF(FPDF):
     def header(self):
         # Logo
-        self.image('/workspaces/KMIT_IOMP/Frontend+Backend/header_img.jpg', 10, 8, 33)
+        self.image('header_img.png', 10, 8, 33)
         # Arial bold 15
         self.set_font('Arial', 'B', 20)
         # Move to the right
@@ -87,8 +87,6 @@ pdf.ln()
 
 
 pdf.set_font('Arial', '', 12)
-
-
 for i in range(3, 21):
     pdf.cell(0, 10, 'Printing line number ' + str(i), 0, 1)
 pdf_name='WQA_Report_'+str(current_date)
