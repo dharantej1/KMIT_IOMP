@@ -148,8 +148,6 @@ def predict():
 
 @app.route('/download',methods=['POST','GET'])
 def download():
-    # pass
-    
     path = 'WQA_Report_'+str(predict.current_time)+'.pdf'
     return send_file(path, as_attachment=True)
 
