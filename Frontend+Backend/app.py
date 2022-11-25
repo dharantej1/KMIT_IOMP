@@ -134,7 +134,7 @@ def predict():
         print("PDF Report is saved in the current directory as: ",pdf_name)
         return render_template("waterqualityanalysis.html",pred="The Sample of Water is Suitable for Drinking")
     else:
-        pdf.text(32,245,"Water is Not Suitable for Drinking")
+        pdf.text(22,245,"Water is Not Suitable for Drinking")
         pdf.output(pdf_name+".pdf", 'F')
         print("PDF Report is saved in the current directory as: ",pdf_name)
         return render_template("waterqualityanalysis.html",pred="The Sample of Water is Not Suitable for Drinking")
