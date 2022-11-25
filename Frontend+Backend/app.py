@@ -124,19 +124,19 @@ def predict():
         pdf.cell(80,-10,percentage_changes[i],0,1)
 
 
-    pdf.set_font('Arial', 'B', 20)
+    pdf.set_font('Arial', 'B', 30)
     
     pdf_name='WQA_Report_'+str(current_date)
     
     if abs(final_result)>0.5:
-        pdf.cell(0,-25,"Water is Suitable for Drinking",0,1,"C")
+        pdf.text(32,245,"Water is Suitable for Drinking")
         pdf.output(pdf_name+".pdf", 'F')
         print("PDF Report is saved in the current directory as: ",pdf_name)
         return render_template("waterqualityanalysis.html",pred="The Sample of Water is Suitable for Drinking")
     else:
+        pdf.text(32,245,"Water is Not Suitable for Drinking")
         pdf.output(pdf_name+".pdf", 'F')
         print("PDF Report is saved in the current directory as: ",pdf_name)
-        pdf.cell(0,-25,"Water is Not Suitable for Drinking",0,1,"C")
         return render_template("waterqualityanalysis.html",pred="The Sample of Water is Not Suitable for Drinking")
         # PDF End
 
