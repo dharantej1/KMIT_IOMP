@@ -6,8 +6,10 @@ import base64
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import matplotlib.pyplot as plt
 import seaborn as sns
-# from sklearn.preprocessing import StandardScaler
 from joblib import load
+from fpdf import FPDF
+
+
 
 app = Flask(__name__,template_folder="./")
 
@@ -32,11 +34,12 @@ def predict():
         return render_template("waterqualityanalysis.html",pred="The Sample of Water is Suitable for Drinking")
     else:
         return render_template("waterqualityanalysis.html",pred="The Sample of Water is Not Suitable for Drinking")
-
-
-    # fig,ax=plt.subplots(figsize=(6,6))
-    # ax=sns.set_style(style="darkgrid")
     
+pdf=FPDF()
+pdf.add_page()
+pdf.set_font("Arial","B",16)
+pdf.cell(40, 10, 'Hello World!')
+pdf.output('tuto1.pdf', 'F')
 
 if __name__ == '__main__':
     app.run(debug=True)
