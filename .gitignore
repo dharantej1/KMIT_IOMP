@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+#custom ignores
+/.idea
+/.ipynb_checkpoints
+/Jupyter_Notebooks
+/Inputs_and_Outputs_pdf
