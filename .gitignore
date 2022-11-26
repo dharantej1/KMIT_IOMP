@@ -132,5 +132,5 @@ dmypy.json
 #custom ignores
 /.idea
 /.ipynb_checkpoints
-/Jupyter_Notebooks
-/Inputs_and_Outputs_pdf
+#/Jupyter_Notebooks
+#/Inputs_and_Outputs_pdf
