@@ -148,8 +148,11 @@ def predict():
 
 @app.route('/download',methods=['POST','GET'])
 def download():
-    path = 'WQA_Report_'+str(predict.current_time)+'.pdf'
-    return send_file(path, as_attachment=True)
+    try:
+        path = 'WQA_Report_'+str(predict.current_time)+'.pdf'
+        return send_file(path, as_attachment=True)
+    except (AttributeError):
+        return render_template("waterqualityanalysis.html",pred="*** Please Enter the Values and Click the Predict Button! ***")
 
 if __name__ == '__main__':
     app.run(debug=True)
