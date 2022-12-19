@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from joblib import load
 from fpdf import FPDF
-
 import datetime
 
 
