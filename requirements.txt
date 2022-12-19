@@ -17,3 +17,5 @@ Keras
 tensorflow
 fpdf
 joblib
+sklearn
+matplotlib
