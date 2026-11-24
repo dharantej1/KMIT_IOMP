@@ -134,3 +134,4 @@ dmypy.json
 /.ipynb_checkpoints
 #/Jupyter_Notebooks
 #/Inputs_and_Outputs_pdf
+.DS_Store
